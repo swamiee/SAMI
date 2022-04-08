@@ -1,0 +1,275 @@
+/* 풀스크린동영상 배경 */
+#bgvideo{
+    min-width:100%; 
+    min-height:100vh;
+    position: fixed;
+    width:auto;
+    height:auto;
+    z-index: -999;
+}
+
+#wrap{
+    /* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */
+    color:#333;
+}
+#wrap > section{
+    width:100%;
+    height: 100vh;
+    position:relative;
+    /* outline:1px #333 solid; */
+}
+
+.left{
+    background: rgba(255,255,255,.9);
+}
+
+/* section 1 */
+.pf_title{
+    display:flex; width:200px;
+    justify-content: space-between;
+}
+
+.pf_title div:nth-child(1){
+    transition: .6s;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.pf_title.on div:nth-child(1){
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pf_title div:nth-child(2){
+    transition: .6s;
+    transition-delay: .2s;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.pf_title.on div:nth-child(2){
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.pf_title div:nth-child(3){
+    transition: .6s;
+    transition-delay: .4s;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.pf_title.on div:nth-child(3){
+    transform: translateY(0);
+    opacity: 1;
+}
+/* .titleText */
+.titleText{
+    transition: .6s;
+    opacity: 0;
+    transform: translateX(50px);
+}
+.titleText.on{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+#wrap > section:nth-child(1) h3{
+    font-family: 'HSGyeoulNoonkott20';
+    position:absolute;
+    top:50%; 
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#wrap > section:nth-child(1) p{
+    position:absolute;
+    top:70%; 
+    left:70%;
+    font-size: 13px;
+}
+
+/* section 2 - 프로필 */
+#wrap > section:nth-child(2){
+    display:flex;
+}
+#wrap > section:nth-child(2) .left{
+    width:calc(30% - 3px);
+    /* border-right: 3px #fff solid;  */
+}
+#wrap .right{
+    width:70%;    
+}
+
+/* section 3 - 명함 */
+#wrap > section:nth-child(3){
+    display:flex;
+}
+#wrap > section:nth-child(3) .left{
+    width:25%;
+    /* border-right: 1px #ccc solid;     */
+}
+#wrap .right{
+    width:75%;    
+}
+
+#wrap .card{
+    width:80%;
+    margin: 0 auto;
+    position: relative;
+    top:70%;
+}
+
+#wrap .card h1{
+    font-size: 24pt;    
+}
+#wrap .card h2{
+    font-size: 13pt;    
+}
+#wrap .card h3{
+    font-size: 11pt;    
+}
+#wrap .card p{
+    font-size: 10pt;    
+}
+
+.bar{
+    width: 60%;
+    border-bottom:1px #333 solid;
+    margin: 10px auto 5px 0;
+}
+
+.title{
+    width:35%;
+    border-bottom:1px #ccc solid;
+    position: relative;
+    top:30px;
+    text-align: right;
+    color:#ccc;
+}
+.title strong{
+    color:#777;
+}
+
+.mokup{
+    width:80%;
+    margin:15vh 5% 15vh 15%;
+    height:70vh;
+    background:url("../img/nameCard_pf1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+/* section 4 - 세로배너 */
+#wrap > section:nth-child(4){
+    display:flex;
+    flex-direction: row-reverse;
+}
+#wrap > section:nth-child(4) .left{
+    width:25%;
+}
+#wrap .right{
+    width:75%;    
+}
+
+#wrap > section:nth-child(4) .mokup{
+    width:80%;
+    margin:15vh 10% 15vh 10%;
+    height:70vh;
+    background:url("../img/nameCard_pf1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* section 5 - 겔러리 슬라이드 */
+#wrap > section:nth-child(5){
+    display:flex;
+}
+#wrap > section:nth-child(5) .left{
+    width:25%;
+}
+#wrap .right{
+    width:75%;    
+}
+
+#wrap > section:nth-child(5) .mokup{
+    width:80%;
+    margin:15vh 15% 15vh 5%;
+    height:70vh;
+    background: #fff;    
+}
+
+.gall{
+    width:100%;
+    height:70vh;
+    position: relative;
+    z-index: 100;
+}
+
+/* #popupNav */
+#popupNav{
+    width:100%; height:100vh;
+    background: rgb(0,0,0,0);
+    position: fixed;
+    top:0; left:0;
+    z-index: -100;
+    transition: .3s;
+}
+#popupNav.on{
+    background: rgb(0,0,0,.6);    
+    z-index: 8888;
+}
+#popupNav nav{
+    width:20%; margin-left: 100%;
+    height:100vh;
+    background: #333;
+    padding-top:10vh;
+    box-sizing: border-box;
+    transition: .3s;
+}
+#popupNav.on nav{
+    margin-left: 80%;
+}
+.gnb a{
+    text-align: center;
+    line-height: 60px;
+    color:#fff;
+    display: block;
+    font-size: 1.2rem;
+}
+.gnb a:hover{
+    font-weight: bold;
+    color:#ffa;
+}
+
+/* .burger */
+.burger{
+    width:40px; height:40px;
+    position: absolute;
+    top:20px;
+    right: 20px;
+    z-index: 9999999999;
+}
+.burger.on .navbar:nth-child(1),
+.burger.on .navbar:nth-child(4){
+    opacity: 0;    
+}
+
+.burger.on .navbar:nth-child(2){
+    transform: rotate(45deg);
+    transition-delay: .2s;
+} 
+.burger.on .navbar:nth-child(3){
+    transform: rotate(-45deg);
+    transition-delay: .2s;
+} 
+.navbar{
+    width:40px;
+    height:8px;
+    background: #ccc;
+    transition: .3s;
+}
+.navbar:nth-child(even){
+    position: relative;
+    top:8px;
+}
